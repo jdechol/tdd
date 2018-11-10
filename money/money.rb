@@ -1,11 +1,17 @@
 class Money
-  attr_reader :amount
+  def self.dollar(amount)
+    Dollar.new(amount)
+  end
 
-  def initialize(amount)
-    @amount = amount
+  def self.franc(amount)
+    Franc.new(amount)
   end
 
   def ==(other)
     self.class == other.class && amount == other.amount
   end
+
+  protected
+
+  attr_reader :amount
 end
