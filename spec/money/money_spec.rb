@@ -1,13 +1,11 @@
 require_relative '../../money/money'
-require_relative '../../money/dollar'
-require_relative '../../money/franc'
 
 describe 'money' do
   describe 'multiplication' do
     it 'multiplies correctly' do
       five = Money.dollar(5)
-      expect(five.times(2)).to eq Dollar.new(10)
-      expect(five.times(3)).to eq Dollar.new(15)
+      expect(five.times(2)).to eq Money.dollar(10)
+      expect(five.times(3)).to eq Money.dollar(15)
     end
   end
 
